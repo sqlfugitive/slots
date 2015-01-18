@@ -18,6 +18,18 @@
     <![endif]-->
   </head>
   <body>
+  {% include 'includes/nav.html' %}
+  <div class='container'>
+    <div class='row'>
+       
+       {% if messages %}
+    {% for message in messages %}
+       <div class="alert alert-info" role="alert">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+    </div>
+  
+  </div>
   
   {% block content %}
   
